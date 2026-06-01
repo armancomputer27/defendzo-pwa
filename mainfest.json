@@ -1,20 +1,21 @@
 {
-  "name": "defendzo-razorpay-server",
-  "version": "1.0.0",
-  "description": "Defendzo Mandate & EMI Server",
-  "main": "server.js",
-  "type": "commonjs",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
-  "dependencies": {
-    "express": "^4.19.2",
-    "axios": "^1.7.2",
-    "dotenv": "^16.4.5",
-    "cors": "^2.8.5"
-  },
-  "engines": {
-    "node": ">=18"
-  }
+  "name": "Defendzo WhatsApp Sender",
+  "short_name": "Defendzo",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#25D366",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
