@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Defendzo WhatsApp Sender</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#25D366">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f2f5f7;
+padding:15px;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+}
+
+.banner{
+background:linear-gradient(135deg,#ff9800,#ff5722);
+color:white;
+padding:20px;
+border-radius:12px;
+text-align:center;
+margin-bottom:15px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+label{
+display:block;
+margin-top:12px;
+margin-bottom:5px;
+font-weight:bold;
+}
+
+.mobile-box{
+display:flex;
+}
+
+.prefix{
+padding:12px;
+background:#eee;
+border:1px solid #ccc;
+border-right:none;
+border-radius:8px 0 0 8px;
+}
+
+.mobile-box input{
+flex:1;
+padding:12px;
+border:1px solid #ccc;
+border-radius:0 8px 8px 0;
+}
+
+textarea{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+}
+
+button{
+width:100%;
+padding:14px;
+margin-top:15px;
+background:#25D366;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.footer{
+text-align:center;
+margin-top:15px;
+font-size:13px;
+color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="banner">
+<h2>DEFENDZO</h2>
+<p>WhatsApp Marketing Sender</p>
+<p>📞 9669595400</p>
+</div>
+
+<div class="card">
+
+<label>Mobile Number</label>
+
+<div class="mobile-box">
+<div class="prefix">+91</div>
+<input type="tel"
+id="mobile"
+maxlength="10"
+placeholder="9876543210">
+</div>
+
+<label>Message</label>
+
+<textarea id="message" rows="14">नया लॉन्च कंपनी
+Defendzo (डिफेंडजो)
+
+डाउनलोड करें:
+https://storage.googleapis.com/defendzopro/defendzo3.apk
+
+आज ही अपना अकाउंट बनाएं, आज 1 Key फ्री मिलेगा।
+
+💰 प्लान:
+• 600 रुपये में 4 Key
+• 2000 रुपये में 16 Key
+• 5000 रुपये में 50 Key
+
+📌 सर्विस:
+1. Lock/Unlock
+2. Offline Lock/Unlock
+3. Live Location
+4. SIM Details (Auto)
+5. Automatic SIM Change Alert Message
+6. App Hide/Unhide
+7. Auto EMI Reminder
+8. Finance Calculator
+9. Auto Lock Enable/Disable
+10. FRP Apply (Dealer Email)
+11. Penalty System
+12. Report(Profit-loss)
+
+📞 अभी संपर्क करें:
+9669595400, 6263783290
+</textarea>
+
+<button onclick="sendWhatsApp()">
+WhatsApp पर भेजें
+</button>
+
+</div>
+
+<div class="footer">
+© Defendzo 2026
+</div>
+
+</div>
+
+<script>
+function sendWhatsApp(){
+
+let mobile =
+document.getElementById("mobile").value.trim();
+
+let message =
+document.getElementById("message").value.trim();
+
+if(mobile.length!=10){
+alert("10 अंकों का मोबाइल नंबर डालें");
+return;
+}
+
+let url=
+"https://wa.me/91"+mobile+
+"?text="+encodeURIComponent(message);
+
+window.open(url,"_blank");
+}
+
+if('serviceWorker' in navigator){
+navigator.serviceWorker.register('sw.js');
+}
+</script>
+
+</body>
+</html>
